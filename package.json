@@ -1,0 +1,24 @@
+{
+  "name": "setup-maven-cli",
+  "version": "1.0.0",
+  "description": "A gitHub Action to set up Maven CLI on a runner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/index.js -o dist --license licenses.txt"
+  },
+  "private": true,
+  "keywords": [
+    "github",
+    "action",
+    "maven",
+    "setup"
+  ],
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/tool-cache": "^2.0.2"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3"
+  }
+}

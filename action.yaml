@@ -1,0 +1,21 @@
+name: setup-maven-cli
+description: Downloads and setups the Maven CLI tool for use in GitHub Actions workflows.
+
+author: Raja Anbazhagan
+
+branding:
+  icon: 'box'
+  color: 'orange'
+
+inputs:
+  maven_version:
+    description: The version of Maven to set up. Defaults to the latest stable version.
+    required: false
+  download_url_pattern:
+    description: A mirror url with {version} pattern to download zip or tar.gz maven binary archive.
+    required: false
+    default: https://archive.apache.org/dist/maven/maven-3/{version}/binaries/apache-maven-{version}-bin.tar.gz
+
+runs:
+  using: node20
+  main: dist/index.js
